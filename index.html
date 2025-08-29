@@ -1,0 +1,339 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   My Blog
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8 25%, #d9e2ec 100%);
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #4f46e5, #3b82f6);
+      color: white;
+      border-radius: 0 0 1rem 1rem;
+      box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+    }
+    main > div.border {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      font-weight: 600;
+      color: #374151;
+    }
+    .clickable {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .clickable:hover {
+      filter: brightness(0.9);
+    }
+  </style>
+ </head>
+ <body>
+  <div class="min-h-screen flex flex-col">
+   <header class="container mx-auto px-4 py-6">
+    <h1 class="font-bold text-2xl mb-2">
+     My Blog
+    </h1>
+    <a class="text-white underline" href="#">
+     Home
+    </a>
+   </header>
+   <!-- Hero Section -->
+   <section class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] mb-8">
+    <img alt="Scenic landscape with mountains and sky as hero background" class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/34322879-76a0-4fa5-c1aa-6fa41f83735f.jpg" width="1200"/>
+    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex flex-col items-center justify-center px-4 text-center text-white">
+     <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold max-w-3xl mb-6">
+      Welcome to My Blog
+     </h2>
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl w-full">
+      <div class="bg-purple-600 bg-opacity-70 rounded p-4 shadow-lg">
+       <h3 class="font-semibold mb-2">
+        Inspiration
+       </h3>
+       <p class="text-sm">
+        Discover stories that spark your creativity and passion.
+       </p>
+      </div>
+      <div class="bg-blue-600 bg-opacity-70 rounded p-4 shadow-lg">
+       <h3 class="font-semibold mb-2">
+        Community
+       </h3>
+       <p class="text-sm">
+        Join a vibrant community of like-minded readers and writers.
+       </p>
+      </div>
+      <div class="bg-green-600 bg-opacity-70 rounded p-4 shadow-lg">
+       <h3 class="font-semibold mb-2">
+        Growth
+       </h3>
+       <p class="text-sm">
+        Learn and grow with insightful articles and resources.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <main class="container mx-auto px-4 flex-grow space-y-8">
+    <!-- Blog Section -->
+    <section class="bg-white p-6 rounded shadow-md">
+     <h3 class="font-semibold text-lg mb-6">
+      Blog
+     </h3>
+     <div class="space-y-6">
+      <article aria-pressed="false" class="border border-gray-200 rounded p-4 hover:shadow-lg transition-shadow cursor-pointer clickable" onclick="alert('Sample Blog Post clicked')" role="button" tabindex="0">
+       <h4 class="font-bold text-blue-700 underline mb-1">
+        Sample Blog Post
+       </h4>
+       <p class="text-sm mb-1">
+        Posted on April 27, 2024
+       </p>
+       <p class="text-sm">
+        This is a sample blog post to demonstrate the blog website structure.
+       </p>
+      </article>
+      <article aria-pressed="false" class="border border-gray-200 rounded p-4 hover:shadow-lg transition-shadow cursor-pointer clickable" onclick="alert('Another Blog Post clicked')" role="button" tabindex="0">
+       <h4 class="font-bold text-blue-700 underline mb-1">
+        Another Blog Post
+       </h4>
+       <p class="text-sm mb-1">
+        Posted on March 15, 2024
+       </p>
+       <p class="text-sm">
+        Explore more content and insights on various topics.
+       </p>
+      </article>
+      <article aria-pressed="false" class="border border-gray-200 rounded p-4 hover:shadow-lg transition-shadow cursor-pointer clickable" onclick="alert('Tech Trends 2024 clicked')" role="button" tabindex="0">
+       <h4 class="font-bold text-blue-700 underline mb-1">
+        Tech Trends 2024
+       </h4>
+       <p class="text-sm mb-1">
+        Posted on February 10, 2024
+       </p>
+       <p class="text-sm">
+        Stay updated with the latest technology trends and innovations.
+       </p>
+      </article>
+     </div>
+    </section>
+    <!-- Locations -->
+    <div class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-4">
+      Locations
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-purple-50" onclick="alert('New York clicked')" role="button" tabindex="0">
+       New York
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-pink-50" onclick="alert('Los Angeles clicked')" role="button" tabindex="0">
+       Los Angeles
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-green-50" onclick="alert('Chicago clicked')" role="button" tabindex="0">
+       Chicago
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-yellow-50" onclick="alert('Houston clicked')" role="button" tabindex="0">
+       Houston
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-blue-50" onclick="alert('Miami clicked')" role="button" tabindex="0">
+       Miami
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-red-50" onclick="alert('San Francisco clicked')" role="button" tabindex="0">
+       San Francisco
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-indigo-50" onclick="alert('Seattle clicked')" role="button" tabindex="0">
+       Seattle
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-emerald-50" onclick="alert('Boston clicked')" role="button" tabindex="0">
+       Boston
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm clickable bg-amber-50" onclick="alert('Denver clicked')" role="button" tabindex="0">
+       Denver
+      </div>
+     </div>
+    </div>
+    <!-- Music -->
+    <div class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-4">
+      Music
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-purple-100 to-purple-50 clickable" onclick="alert('Rock clicked')" role="button" tabindex="0">
+       Rock
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-pink-100 to-pink-50 clickable" onclick="alert('Jazz clicked')" role="button" tabindex="0">
+       Jazz
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-green-100 to-green-50 clickable" onclick="alert('Classical clicked')" role="button" tabindex="0">
+       Classical
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-yellow-100 to-yellow-50 clickable" onclick="alert('Pop clicked')" role="button" tabindex="0">
+       Pop
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-blue-100 to-blue-50 clickable" onclick="alert('Hip Hop clicked')" role="button" tabindex="0">
+       Hip Hop
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-red-100 to-red-50 clickable" onclick="alert('Country clicked')" role="button" tabindex="0">
+       Country
+      </div>
+     </div>
+    </div>
+    <!-- Videos -->
+    <div class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-4">
+      Videos
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-indigo-100 to-indigo-50 clickable" onclick="alert('Documentary clicked')" role="button" tabindex="0">
+       Documentary
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-rose-100 to-rose-50 clickable" onclick="alert('Tutorial clicked')" role="button" tabindex="0">
+       Tutorial
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-emerald-100 to-emerald-50 clickable" onclick="alert('Music Video clicked')" role="button" tabindex="0">
+       Music Video
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-amber-100 to-amber-50 clickable" onclick="alert('Vlog clicked')" role="button" tabindex="0">
+       Vlog
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-cyan-100 to-cyan-50 clickable" onclick="alert('Animation clicked')" role="button" tabindex="0">
+       Animation
+      </div>
+      <div aria-pressed="false" class="p-3 border border-gray-200 rounded shadow-sm bg-gradient-to-r from-fuchsia-100 to-fuchsia-50 clickable" onclick="alert('Interview clicked')" role="button" tabindex="0">
+       Interview
+      </div>
+     </div>
+    </div>
+    <!-- Services Section -->
+    <section class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-6">
+      Services
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm">
+      <div aria-pressed="false" class="p-4 bg-blue-100 rounded shadow clickable" onclick="alert('Content Creation clicked')" role="button" tabindex="0">
+       <h4 class="font-semibold mb-2">
+        Content Creation
+       </h4>
+       <p>
+        Create engaging and original content tailored to your audience.
+       </p>
+      </div>
+      <div aria-pressed="false" class="p-4 bg-green-100 rounded shadow clickable" onclick="alert('SEO Optimization clicked')" role="button" tabindex="0">
+       <h4 class="font-semibold mb-2">
+        SEO Optimization
+       </h4>
+       <p>
+        Improve your website’s visibility and ranking on search engines.
+       </p>
+      </div>
+      <div aria-pressed="false" class="p-4 bg-purple-100 rounded shadow clickable" onclick="alert('Social Media Management clicked')" role="button" tabindex="0">
+       <h4 class="font-semibold mb-2">
+        Social Media Management
+       </h4>
+       <p>
+        Manage and grow your social media presence effectively.
+       </p>
+      </div>
+     </div>
+    </section>
+    <!-- About Section -->
+    <section class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-6">
+      About
+     </h3>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+      <div>
+       <h4 class="font-semibold mb-2">
+        Our Mission
+       </h4>
+       <p>
+        To provide high-quality content that inspires and educates our readers.
+       </p>
+      </div>
+      <div>
+       <h4 class="font-semibold mb-2">
+        Our Vision
+       </h4>
+       <p>
+        To be a leading blog platform that connects people through stories and knowledge.
+       </p>
+      </div>
+     </div>
+    </section>
+    <!-- Team Section -->
+    <section class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-6">
+      Team
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+      <div aria-pressed="false" class="flex flex-col items-center text-center p-4 bg-indigo-50 rounded shadow clickable" onclick="alert('Alice clicked')" role="button" tabindex="0">
+       <img alt="Portrait of Alice, team member" class="rounded-full mb-3" height="100" src="https://storage.googleapis.com/a1aa/image/ec562a54-d5fe-4e7c-1b07-b24a5b04cf4b.jpg" width="100"/>
+       <h4 class="font-semibold">
+        Alice
+       </h4>
+       <p>
+        Content Writer
+       </p>
+      </div>
+      <div aria-pressed="false" class="flex flex-col items-center text-center p-4 bg-pink-50 rounded shadow clickable" onclick="alert('Bob clicked')" role="button" tabindex="0">
+       <img alt="Portrait of Bob, team member" class="rounded-full mb-3" height="100" src="https://storage.googleapis.com/a1aa/image/52fa43d0-bb05-4d77-4af7-4c9e47202e83.jpg" width="100"/>
+       <h4 class="font-semibold">
+        Bob
+       </h4>
+       <p>
+        SEO Specialist
+       </p>
+      </div>
+      <div aria-pressed="false" class="flex flex-col items-center text-center p-4 bg-green-50 rounded shadow clickable" onclick="alert('Carol clicked')" role="button" tabindex="0">
+       <img alt="Portrait of Carol, team member" class="rounded-full mb-3" height="100" src="https://storage.googleapis.com/a1aa/image/1300c8ff-96d2-4fe0-5a98-a4855b9107a5.jpg" width="100"/>
+       <h4 class="font-semibold">
+        Carol
+       </h4>
+       <p>
+        Social Media Manager
+       </p>
+      </div>
+      <div aria-pressed="false" class="flex flex-col items-center text-center p-4 bg-yellow-50 rounded shadow clickable" onclick="alert('Dave clicked')" role="button" tabindex="0">
+       <img alt="Portrait of Dave, team member" class="rounded-full mb-3" height="100" src="https://storage.googleapis.com/a1aa/image/f68746eb-4d43-4c0c-24d9-ebdc0a94ae92.jpg" width="100"/>
+       <h4 class="font-semibold">
+        Dave
+       </h4>
+       <p>
+        Developer
+       </p>
+      </div>
+     </div>
+    </section>
+    <!-- Gallery Section -->
+    <section class="p-4 border border-gray-300 rounded bg-white shadow-sm">
+     <h3 class="font-semibold text-lg mb-6">
+      Gallery
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img alt="Gallery image 1: scenic mountain landscape" class="rounded shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/c7d2befb-8d2d-4dd8-51c9-00882b413d16.jpg" width="600"/>
+      <img alt="Gallery image 2: city skyline at sunset" class="rounded shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/03d96184-13c3-4e1d-a666-b3e3c587419c.jpg" width="600"/>
+      <img alt="Gallery image 3: forest trail with sunlight" class="rounded shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/28d6d2b3-079b-4432-eedb-2a5bb628c2ac.jpg" width="600"/>
+      <img alt="Gallery image 4: beach with waves and blue sky" class="rounded shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/aea53db9-8fc9-4281-4517-e4683cf0c5be.jpg" width="600"/>
+      <img alt="Gallery image 5: close-up of colorful flowers" class="rounded shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/5acc11d2-38b8-4d8c-8bb2-89b3cd8bdd82.jpg" width="600"/>
+      <img alt="Gallery image 6: night sky with stars and moon" class="rounded shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/6e0b8118-7f86-49f8-812b-8be7d92641a4.jpg" width="600"/>
+     </div>
+    </section>
+   </main>
+   <footer class="container mx-auto px-4 py-4 text-sm">
+    <p>
+     © 2024 My Blog. All rights reserved.
+    </p>
+   </footer>
+  </div>
+ </body>
+</html>
